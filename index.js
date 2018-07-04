@@ -10,7 +10,7 @@ app.set('port',  (process.env.PORT || 5000))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-token = "EAADvzlgkPJ0BABe4P7YPg9IAOeN3GdZCi30NHr6dUkh8MKu4cGM0e0VYY5ZB4BfsisRoZBuzkcYshGWSOBXKaCo9AOEDPEgJvfhlU4jAzNt3CnpSn50uZAMuaRrBaUgL4gSdgRl5XVmzZAfZBgvuLTRHnp0aUDtElDubP9J2LA5vKeD4ixs6Mw"
+ let token = "EAADvzlgkPJ0BABe4P7YPg9IAOeN3GdZCi30NHr6dUkh8MKu4cGM0e0VYY5ZB4BfsisRoZBuzkcYshGWSOBXKaCo9AOEDPEgJvfhlU4jAzNt3CnpSn50uZAMuaRrBaUgL4gSdgRl5XVmzZAfZBgvuLTRHnp0aUDtElDubP9J2LA5vKeD4ixs6Mw"
 
 app.get('/', function(req, res){
     res.send("Hi I am a chatBot");
