@@ -92,7 +92,8 @@ function sendImageMessage(sender){
         "attachment": {
             "type":"image",
             "payload":{
-                "url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiB3dvkn4XcAhXDMI8KHdIwB1AQjRx6BAgBEAU&url=https%3A%2F%2Ffood.ndtv.com%2Fphotos%2F10-summer-inspired-images-to-cool-your-mood-21984&psig=AOvVaw0P5GKRrvkgoWVbb1-dB6RV&ust=1530786910317289"
+                // "url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiB3dvkn4XcAhXDMI8KHdIwB1AQjRx6BAgBEAU&url=https%3A%2F%2Ffood.ndtv.com%2Fphotos%2F10-summer-inspired-images-to-cool-your-mood-21984&psig=AOvVaw0P5GKRrvkgoWVbb1-dB6RV&ust=1530786910317289"
+                    "url":"https://gallery.yopriceville.com/Free-Clipart-Pictures/Summer-Vacation-PNG/Summer_Sea_Decoration_PNG_Clipart_Image"
             }
         }
     }
