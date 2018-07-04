@@ -30,16 +30,102 @@ app.post('/webhook/', function(req,res){
         let sender = event.sender.id
         if(event.message && event.message.text){
             let text= event.message.text
-            sendText(sender, "Text echo:" + text.substring(0, 100))
+            // sendText(sender, "Text echo:" + text.substring(0, 100))
+            decideMessage(sender, text);
+        }
+        if(event.postback){
+            let text = JSON.stringify(event.postback);
+            decideMessage(sender, text)
+            continue
         }
     }
     res.sendStatus(200);
 })
 
+function decideMessage(sender, text1){
+    let text = text1.toLowerCase()
+    if(text.includes("summer")){
+        sendImageMessage(sender);
+    }else if(text.includes("winter")){
+        sendGenericMessage(sender);
+    }
+    else{
+        sendText(sender, "I Like Fall");
+        sendButtonMesssage(sender, "What is your Favourite season?");
+    }
+}
+
 function sendText(sender, text){
     let messageData = {
         text: text
     }
+   sendRequest(sender, messageData)
+}
+
+function sendButtonMesssage(sender, text){
+    let messageData = {
+        "attachment":{
+            "type":"template",
+            "payload":{
+              "template_type":"button",
+              "text":text,
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"Summer",
+                  "payload":"summer"
+                },
+                {
+                    "type":"postback",
+                    "title":"Winter",
+                    "payload":"winter"
+                },
+              ]
+            }
+          }
+    }
+    sendRequest(sender, messageData);
+}
+
+function sendImageMessage(sender){
+    let messageData = {
+        "attachment": {
+            "type":"image",
+            "payload":{
+                "url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiB3dvkn4XcAhXDMI8KHdIwB1AQjRx6BAgBEAU&url=https%3A%2F%2Ffood.ndtv.com%2Fphotos%2F10-summer-inspired-images-to-cool-your-mood-21984&psig=AOvVaw0P5GKRrvkgoWVbb1-dB6RV&ust=1530786910317289"
+            }
+        }
+    }
+    sendRequest(sender, messageData);
+}
+
+function sendGenericMessage(sender){
+    let messageData = {
+         "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Winter!",
+              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj34fIooXcAhVMv48KHb6PAwEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fwinter%2F&psig=AOvVaw0VnZutizdIdsdPcwZNY5fo&ust=1530787661428618",
+              "subtitle":"I LOve Winter",
+              "buttons":[
+                {
+                  "type":"web_url",
+                  "url":"https://en.wikipedia.org/wiki/Winter",
+                  "title":"More About Winter"
+                }               
+              ]      
+            }
+          ]
+        }
+     }
+}
+sendRequest(sender, messageData);
+}
+
+function sendRequest(sender, messageData){
     request({
         url:"https://graph.facebook.com/v2.6/me/messages",
         qs : {access_token: token},
@@ -54,8 +140,9 @@ function sendText(sender, text){
         }else if(response.body.error){
             console.log("response body error")
         }
-    })
+    })  
 }
+
 app.listen(app.get('port'), function(){
     console.log("running !!");
 });
