@@ -76,10 +76,10 @@ function sendButtonMesssage(sender, text){
                   "payload":"summer"
                 },
                 {
-                    "type":"postback",
+                  "type":"postback",
                     "title":"Winter",
                     "payload":"winter"
-                },
+                }
               ]
             }
           }
