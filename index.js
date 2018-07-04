@@ -91,11 +91,11 @@ function sendButtonMesssage(sender, text){
 
 function sendImageMessage(sender){
     let messageData = {
-        "attachment":{
-            "type":"image", 
-            "payload":{
-              "url":"http://www.messenger-rocks.com/image.jpg", 
-              "is_reusable":true
+        attachment:{
+            type:"image", 
+            payload:{
+              url:"http://www.messenger-rocks.com/image.jpg"
+            //   is_reusable:true
             }
           }
         }
