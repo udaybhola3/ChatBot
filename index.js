@@ -52,6 +52,10 @@ function decideMessage(sender, text1){
         sendGenericMessage(sender);
         console.log("winter inside decide message function");
     }
+    else if(text.includes("rainy")){
+        sendRainyImageMessage(sender);
+        console.log("rainy season, inside decide message function");
+    }
     else{
      sendText(sender, "I Like Fall");
         sendButtonMesssage(sender, "What is your Favourite season?");
@@ -133,6 +137,19 @@ function sendGenericMessage(sender){
      }
 }
 sendRequest(sender, messageData);
+}
+
+function sendRainyImageMessage(sender){
+    let messageData = { 
+        "attachment":{
+        "type":"image", 
+        "payload":{
+          "url":"http://www.messenger-rocks.com/image.jpg", 
+          "is_reusable":true
+        }
+      }
+    }
+    sendRequest(sender, messageData);
 }
 
 function sendRequest(sender, messageData){
