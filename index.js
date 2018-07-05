@@ -105,7 +105,7 @@ function sendImageMessage(sender){
             "type":"image", 
             "payload":{  
                 "elements":{ 
-              "image_url":"http://www.messenger-rocks.com/image.jpg"
+              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjysMjAtIfcAhVCrI8KHdoEAYUQjRx6BAgBEAU&url=http%3A%2F%2Fitsalaughproductions.wikia.com%2Fwiki%2FFile%3AJune_2012_Logo_(Summer).PNG&psig=AOvVaw3gFIr7TepOZX3bMDS_mpQW&ust=1530861193827287"
             //   is_reusable:true
             }
         }
@@ -124,7 +124,7 @@ function sendGenericMessage(sender){
           "elements":[
              {
               "title":"Winter!",
-              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj34fIooXcAhVMv48KHb6PAwEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fwinter%2F&psig=AOvVaw0VnZutizdIdsdPcwZNY5fo&ust=1530787661428618",
+              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj2uJ-GtYfcAhUGgI8KHVrhAm4QjRx6BAgBEAU&url=http%3A%2F%2Fpluspng.com%2Fwinter-snow-png-282.html&psig=AOvVaw3pbobvv7EiePcQD-2g-e8U&ust=1530861330418026.jpeg",
               "subtitle":"I LOve Winter",
               "buttons":[
                 {
