@@ -82,6 +82,11 @@ function sendButtonMesssage(sender, text){
                   "type":"postback",
                     "title":"Winter",
                     "payload":"winter"
+                },
+                {
+                    "type":"postback",
+                    "title":"Rainy",
+                    "payload":"rainy"
                 }
               ]
             }
@@ -94,7 +99,7 @@ function sendImageMessage(sender){
     let messageData = {
         attachment:{
             type:"image", 
-            payload:{
+            payload:{   
               url:"http://www.messenger-rocks.com/image.jpg"
             //   is_reusable:true
             }
