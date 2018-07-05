@@ -105,7 +105,7 @@ function sendImageMessage(sender){
             "type":"image", 
             "payload":{
               "is_reusable": true,
-              "url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png"
+              "url":"https://thehungryjpeg.com/img/products/2cce1c7dbdcaa2b915ecd635860ff36af17cf1a1.jpg"
             }
           }
         }
@@ -123,7 +123,7 @@ function sendGenericMessage(sender){
           "elements":[
              {
               "title":"Winter!",
-              "image_url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png",
+              "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHSscJXy_74IUCmlNMvnpZmVO-uPderX8jbaQ_Glylqtfxm5OD",
               "subtitle":"I LOve Winter",
               "buttons":[
                 {
@@ -145,8 +145,8 @@ function sendRainyImageMessage(sender){
         "attachment":{
             "type":"image", 
             "payload":{
-              "is_reusable": true,
-              "url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png"
+              
+              "url":"https://www.gambar.co.id/wp-content/uploads/2018/04/wallpaper-3-dimensi-android-rain-wallpaper-hd-c2b7ac291-download-free-awesome-full-hd-wallpapers-for-of-wallpaper-3-dimensi-android.png"
             }
           }
         }
