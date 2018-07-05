@@ -101,12 +101,14 @@ function sendButtonMesssage(sender, text){
 
 function sendImageMessage(sender){
     let messageData = {
-        attachment:{
-            type:"image", 
-            payload:{   
-              url:"http://www.messenger-rocks.com/image.jpg"
+        "attachment":{
+            "type":"image", 
+            "payload":{  
+                "elements":{ 
+              "image_url":"http://www.messenger-rocks.com/image.jpg"
             //   is_reusable:true
             }
+        }
           }
         }
           
@@ -142,13 +144,15 @@ sendRequest(sender, messageData);
 function sendRainyImageMessage(sender){
     let messageData = { 
         "attachment":{
-        "type":"image", 
-        "payload":{
-          "url":"http://www.messenger-rocks.com/image.jpg", 
-          "is_reusable":true
+            "type":"image", 
+            "payload":{  
+                "elements":{ 
+              "image_url":"http://www.messenger-rocks.com/image.jpg"
+            //   is_reusable:true
+            }
+            }
+          }
         }
-      }
-    }
     sendRequest(sender, messageData);
 }
 
