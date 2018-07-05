@@ -103,14 +103,13 @@ function sendImageMessage(sender){
     let messageData = {
         "attachment":{
             "type":"image", 
-            "payload":{  
-                "elements":{ 
-              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjysMjAtIfcAhVCrI8KHdoEAYUQjRx6BAgBEAU&url=http%3A%2F%2Fitsalaughproductions.wikia.com%2Fwiki%2FFile%3AJune_2012_Logo_(Summer).PNG&psig=AOvVaw3gFIr7TepOZX3bMDS_mpQW&ust=1530861193827287"
-            //   is_reusable:true
+            "payload":{
+              "is_reusable": true,
+              "url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png"
             }
-        }
           }
         }
+        
           
     sendRequest(sender, messageData);
 }
@@ -124,7 +123,7 @@ function sendGenericMessage(sender){
           "elements":[
              {
               "title":"Winter!",
-              "image_url":"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj2uJ-GtYfcAhUGgI8KHVrhAm4QjRx6BAgBEAU&url=http%3A%2F%2Fpluspng.com%2Fwinter-snow-png-282.html&psig=AOvVaw3pbobvv7EiePcQD-2g-e8U&ust=1530861330418026.jpeg",
+              "image_url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png",
               "subtitle":"I LOve Winter",
               "buttons":[
                 {
@@ -142,14 +141,12 @@ sendRequest(sender, messageData);
 }
 
 function sendRainyImageMessage(sender){
-    let messageData = { 
+    let messageData = {
         "attachment":{
             "type":"image", 
-            "payload":{  
-                "elements":{ 
-              "image_url":"http://www.messenger-rocks.com/image.jpg"
-            //   is_reusable:true
-            }
+            "payload":{
+              "is_reusable": true,
+              "url":"https://image.flaticon.com/sprites/new_packs/146262-summertime-collection.png"
             }
           }
         }
