@@ -43,16 +43,17 @@ app.post('/webhook/', function(req,res){
 })
 
 function decideMessage(sender, text1){
-    let text = text1.toLowerCase()
+    let text = text1.toLowerCase();
     if(text.includes("summer")){
         sendImageMessage(sender);
-        console.log("summer inside decide message function")
-    }else if(text.includes("winter")){
+         console.log("summer inside decide message function");
+    }
+    else if(text.includes("winter")){
         sendGenericMessage(sender);
-        console.log("winter inside decide message function")
+        console.log("winter inside decide message function");
     }
     else{
-        sendText(sender, "I Like Fall");
+     sendText(sender, "I Like Fall");
         sendButtonMesssage(sender, "What is your Favourite season?");
     }
 }
