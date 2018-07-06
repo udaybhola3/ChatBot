@@ -254,7 +254,7 @@ function sendViewMoreMessage (sender){
     .then(res => res.json())
     .then(json => {console.log(json)
         body=json;
-        var elementsVal = [];
+        var arr = [];
         var metaCnt = body.answers[0].metadata.count;
         for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
             arr.push(
