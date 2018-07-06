@@ -255,8 +255,8 @@ function sendViewMoreMessage (sender){
     .then(json => {console.log(json)
         body=json;
         var arr = [];
-        var metaCnt = body.answers[0].metadata.count;
-        for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
+        var metaCnt = body.answers.metadata.count;
+        for(var i=0;i<((metaCnt>10)?10:metaCnt);i++){
             arr.push(
                 {
                     "title": body.answers[0].data[i].title,
