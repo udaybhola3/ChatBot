@@ -58,10 +58,10 @@ function decideMessage(sender, text1){
     }else if(text.includes("list")){
         sendListMessage(sender);
         console.log("List message, inside decide message function");
-     }//else if(text.includes("view more")){
-    //     sendViewMoreMessage(sender);
-    //     console.log("View more, inside decide message function");
-    // }
+    }else if(text.includes("view more")){
+        sendViewMoreMessage(sender);
+        console.log("View more, inside decide message function");
+    }
     else{
      sendText(sender, "I Like Fall");
         sendButtonMesssage(sender, "What is your Favourite season?");
@@ -212,25 +212,8 @@ function sendListMessage(sender){
                 {
                   "title": "View More",
                   "type": "postback",
-                  "payload":{
-                    "template_type": "list",
-                    "top_element_style": "compact",
-                    "elements": [
-                        {
-                          "title": "Classic T-Shirt Collection",
-                          "subtitle": "See all our colors",
-                          "image_url": "https://5.imimg.com/data5/IW/BW/MY-8481883/white-t-shirt-500x500.jpg",          
-                          "buttons": [
-                            {
-                              "title": "View",
-                              "type": "web_url",
-                              "url": "https://www.amazon.in/dp/B07BVMTB8F?aaxitk=Q4DcVomqOw7p0dGfrClL1A&pd_rd_i=B07BVMTB8F&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_p=2922795243013535066&pf_rd_s=desktop-sx-top-slot&pf_rd_t=301&pf_rd_i=t-shirt&hsa_cr_id=8673287690502",
-                             }
-                          ]
-                        }
-                    ]
-                }            
-                }
+                  "payload":"payload"
+                 }
               ]  
             }
           }
@@ -238,9 +221,28 @@ function sendListMessage(sender){
         sendRequest(sender, messageData);
     }
 
-// function sendViewMoreMessage (sender, text){
-
-// }    
+function sendViewMoreMessage (sender){
+    var elementsVal = [];
+    var metaCnt = body.answers[0].metadata.count;
+    for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
+    elementsVal.push(
+        {
+            "title": body.answers[0].data[i].title,
+            "subtitle": body.answers[0].data[i].link
+        }
+    );
+}
+    let messageData = {
+        "type": "template",
+    "payload": 
+    {
+        "template_type": "list",
+        "top_element_style": "compact",
+        "elements": elementsVal
+    }
+    }
+    sendRequest(sender, messageData);
+}    
 function sendRequest(sender, messageData){
     request({
         url:"https://graph.facebook.com/v2.6/me/messages",
