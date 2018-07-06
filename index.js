@@ -59,9 +59,7 @@ function decideMessage(sender, text1){
     }else if(text.includes("list")){
         sendListMessage(sender);
         console.log("List message, inside decide message function");
-    }else if(text.includes("view more")){
-        sendViewMoreMessage(sender);
-        console.log("View more, inside decide message function");
+    
     }
     else{
      sendText(sender, "I Like Fall");
@@ -234,7 +232,7 @@ function sendViewMoreMessage (sender){
                 "template_type": "generic",
                 "elements": [
                   {
-                    "title": "tension ni laini mitra,, thand rakh rab karu ga bhali",
+                    "title": "welcom",
                     "buttons": [
                       {
                         "type": "web_url",
@@ -257,21 +255,22 @@ function sendViewMoreMessage (sender){
         var elementsVal = [];
         var metaCnt = body.answers[0].metadata.count;
         for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
-        elementsVal.push(
-            {
-                "title": body.answers[0].data[i].title,
-                "subtitle": body.answers[0].data[i].link,
-               "buttons":buttons
-            }
-        );
+            arr.push(
+                {
+                    "title": body.answers[0].data[i].title,
+                    "subtitle": body.answers[0].data[i].link,
+                  
+                }
+            );
     }
-        let messageData = {
+        let messageData =  {
             "type": "template",
-        "payload": 
-        {
-            "template_type": "generic",
-            "elements": elementsVal
-        }
+            "payload": 
+            {
+                "template_type": "generic",
+                "elements": arr
+            }
+        
         }
         sendRequest(sender, messageData);
     });
