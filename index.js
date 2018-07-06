@@ -59,7 +59,9 @@ function decideMessage(sender, text1){
     }else if(text.includes("list")){
         sendListMessage(sender);
         console.log("List message, inside decide message function");
-    
+    }else if(text.includes("why")){
+        sendViewMoreMessage(sender);
+        console.log("View more, inside decide message function");
     }
     else{
      sendText(sender, "I Like Fall");
