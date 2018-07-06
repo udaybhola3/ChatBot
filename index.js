@@ -270,7 +270,6 @@ function sendViewMoreMessage (sender){
         "payload": 
         {
             "template_type": "generic",
-            "top_element_style": "compact",
             "elements": elementsVal
         }
         }
