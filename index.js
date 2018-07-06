@@ -253,10 +253,10 @@ function sendViewMoreMessage (sender){
     fetch('http://api.susi.ai/susi/chat.json?q=why')
     .then(res => res.json())
     .then(json => {
-        console.log(json)
-        body=JSON.parse(json);
+        body=json;
         var arr = [];
-        var metaCnt = body.answers.metadata.count;
+        console.log(body.answers[0].metadata)
+        var metaCnt = body.answers[0].metadata.count;
         for(var i=0;i<((metaCnt>10)?10:metaCnt);i++){
             arr.push(
                 {
