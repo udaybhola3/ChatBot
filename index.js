@@ -255,7 +255,7 @@ function sendViewMoreMessage (sender){
     .then(json => {
         body=json;
         var arr = [];
-        console.log(body.answers[0].metadata)
+        // console.log(body.answers[0].metadata)
         var metaCnt = body.answers[0].metadata.count;
         for(var i=0;i < ((metaCnt>10)?10:metaCnt);i++){
             arr.push(
@@ -285,10 +285,11 @@ function sendRequest(sender, messageData){
         qs : {access_token: token},
         method: "POST",
         json: {
-            recipient: {id:sender},
+            recipient: {id: sender},
             message : messageData
         }
     }, function(error, response, body){
+        console.log('#### :: ', response)
         if(error) {
             console.log("sending error")
         }else if(response.body.error){
