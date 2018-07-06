@@ -166,16 +166,13 @@ function sendListMessage(sender){
                 {
                   "title": "Classic T-Shirt Collection",
                   "subtitle": "See all our colors",
-                  "image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",          
+                  "image_url": "https://5.imimg.com/data5/IW/BW/MY-8481883/white-t-shirt-500x500.jpg",          
                   "buttons": [
                     {
                       "title": "View",
                       "type": "web_url",
-                      "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                      "messenger_extensions": true,
-                      "webview_height_ratio": "tall",
-                      "fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
-                    }
+                      "url": "https://www.amazon.in/dp/B07BVMTB8F?aaxitk=Q4DcVomqOw7p0dGfrClL1A&pd_rd_i=B07BVMTB8F&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_p=2922795243013535066&pf_rd_s=desktop-sx-top-slot&pf_rd_t=301&pf_rd_i=t-shirt&hsa_cr_id=8673287690502",
+                     }
                   ]
                 },
                 {
@@ -183,31 +180,27 @@ function sendListMessage(sender){
                   "subtitle": "See all our colors",
                   "default_action": {
                     "type": "web_url",
-                    "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
-                    "messenger_extensions": false,
-                    "webview_height_ratio": "tall"
+                    "url": "https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=t+shirt",
+                    
                   }
                 },
                 {
                   "title": "Classic Blue T-Shirt",
-                  "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+                  "image_url": "https://5.imimg.com/data5/IW/BW/MY-8481883/white-t-shirt-500x500.jpg",
                   "subtitle": "100% Cotton, 200% Comfortable",
-                  "default_action": {
-                    "type": "web_url",
-                    "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-                    "messenger_extensions": true,
-                    "webview_height_ratio": "tall",
-                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                  },
+                //   "default_action": {
+                //     "type": "web_url",
+                //     "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+                //     "messenger_extensions": true,
+                //     "webview_height_ratio": "tall",
+                //     "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                 // },
                   "buttons": [
                     {
                       "title": "Shop Now",
                       "type": "web_url",
-                      "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                      "messenger_extensions": true,
-                      "webview_height_ratio": "tall",
-                      "fallback_url": "https://peterssendreceiveapp.ngrok.io/"            
-                    }
+                      "url": "https://www.amazon.in/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=t+shirt",
+                 }
                   ]        
                 }
               ],
