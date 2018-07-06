@@ -228,28 +228,29 @@ function sendViewMoreMessage (sender){
     .then(res => res.json())
     .then(json => {console.log(json)
         body=json;
-    });
-    var elementsVal = [];
-    var metaCnt = body.answers[0].metadata.count;
-    for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
-    elementsVal.push(
+        var elementsVal = [];
+        var metaCnt = body.answers[0].metadata.count;
+        for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
+        elementsVal.push(
+            {
+                "title": body.answers[0].data[i].title,
+                "subtitle": body.answers[0].data[i].link,
+                // "button":button
+            }
+        );
+    }
+        let messageData = {
+            "type": "template",
+        "payload": 
         {
-            "title": body.answers[0].data[i].title,
-            "subtitle": body.answers[0].data[i].link,
-            // "button":button
+            "template_type": "list",
+            "top_element_style": "compact",
+            "elements": elementsVal
         }
-    );
-}
-    let messageData = {
-        "type": "template",
-    "payload": 
-    {
-        "template_type": "list",
-        "top_element_style": "compact",
-        "elements": elementsVal
-    }
-    }
-    sendRequest(sender, messageData);
+        }
+        sendRequest(sender, messageData);
+    });
+   
 }    
 function sendRequest(sender, messageData){
     request({
