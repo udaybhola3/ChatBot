@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
+const fetch = require('node-fetch');
 
 const app =express();
 
@@ -222,13 +223,20 @@ function sendListMessage(sender){
     }
 
 function sendViewMoreMessage (sender){
+    var body;
+    fetch('http://api.susi.ai/susi/chat.json?q=why')
+    .then(res => res.json())
+    .then(json => {console.log(json)
+        body=json;
+    });
     var elementsVal = [];
     var metaCnt = body.answers[0].metadata.count;
     for(var i=0;i<((metaCnt>4)?4:metaCnt);i++){
     elementsVal.push(
         {
             "title": body.answers[0].data[i].title,
-            "subtitle": body.answers[0].data[i].link
+            "subtitle": body.answers[0].data[i].link,
+            // "button":button
         }
     );
 }
