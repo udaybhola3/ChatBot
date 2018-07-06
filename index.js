@@ -234,7 +234,7 @@ function sendViewMoreMessage (sender){
                 "template_type": "generic",
                 "elements": [
                   {
-                    "title": message,
+                    "title": "tension ni laini mitra,, thand rakh rab karu ga bhali",
                     "buttons": [
                       {
                         "type": "web_url",
