@@ -224,6 +224,32 @@ function sendListMessage(sender){
 
 function sendViewMoreMessage (sender){
     var body;
+    var buttons= [
+        {
+          "type":"element_share",
+            "share_contents": { 
+            "attachment": {
+              "type": "template",
+              "payload": {
+                "template_type": "generic",
+                "elements": [
+                  {
+                    "title": message,
+                    "buttons": [
+                      {
+                        "type": "web_url",
+                        "url": "https://m.me/asksusiai", 
+                        "title": "Chat with SUSI AI"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        } 
+    ];
+
     fetch('http://api.susi.ai/susi/chat.json?q=why')
     .then(res => res.json())
     .then(json => {console.log(json)
@@ -235,7 +261,7 @@ function sendViewMoreMessage (sender){
             {
                 "title": body.answers[0].data[i].title,
                 "subtitle": body.answers[0].data[i].link,
-                // "button":button
+               "buttons":buttons
             }
         );
     }
