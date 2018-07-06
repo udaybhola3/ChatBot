@@ -186,15 +186,15 @@ function sendListMessage(sender){
                 },
                 {
                   "title": "Classic Blue T-Shirt",
-                  "image_url": "https://5.imimg.com/data5/IW/BW/MY-8481883/white-t-shirt-500x500.jpg",
+                  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyNhi0bN8_bVbjMVmVb5W0qcu7lWhheyvQ0HRYuZbhRkZgQJfN8w",
                   "subtitle": "100% Cotton, 200% Comfortable",
-                //   "default_action": {
-                //     "type": "web_url",
-                //     "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-                //     "messenger_extensions": true,
-                //     "webview_height_ratio": "tall",
-                //     "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                 // },
+                  "default_action": {
+                    "type": "web_url",
+                    "url": "https://www.amazon.in/dp/B07BVXQ284?aaxitk=byFgdcenBlU3RLpRhgVfSw&pd_rd_i=B07BVXQ284&pf_rd_m=A1VBAL9TL5WCBF&pf_rd_p=2922795243013535066&pf_rd_s=desktop-sx-top-slot&pf_rd_t=301&pf_rd_i=t-shirt&hsa_cr_id=8673287690502",
+                    // "messenger_extensions": true,
+                    // "webview_height_ratio": "tall",
+                    // "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                 },
                   "buttons": [
                     {
                       "title": "Shop Now",
