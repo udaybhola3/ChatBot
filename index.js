@@ -250,7 +250,7 @@ function sendViewMoreMessage (sender){
         } 
     ];
 
-    fetch('http://api.susi.ai/susi/chat.json?q=show')
+    fetch('http://api.susi.ai/susi/chat.json?q=why')
     .then(res => res.json())
     .then(json => {
         body=json;
