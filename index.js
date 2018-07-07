@@ -261,7 +261,7 @@ function sendViewMoreMessage (sender){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
-                   
+                    "subtitle": "welcome"
                   
                 }
             );
