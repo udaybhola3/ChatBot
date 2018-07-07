@@ -258,7 +258,7 @@ function sendViewMoreMessage (sender){
         // console.log(body.answers[0].metadata)
         var metaCnt = body.answers[0].metadata.count;
         console.log("//////////////////////", metaCnt);
-        for(var i=0; i<metaCnt;i++){
+        for(var i=0; i<10;i++){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
