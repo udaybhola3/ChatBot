@@ -213,7 +213,7 @@ function sendListMessage(sender){
                 {
                   "title": "Why",
                   "type": "postback",
-                  "payload":"why"
+                  "payload":"payload"
                  }
               ]  
             }
