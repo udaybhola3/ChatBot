@@ -61,7 +61,7 @@ function decideMessage(sender, text1){
         console.log("List message, inside decide message function");
     }else if(text.includes("why")){
         sendViewMoreMessage(sender);
-        console.log("View more, inside decide message function");
+        console.log("why, inside decide message function");
     }
     else{
      sendText(sender, "I Like Fall");
@@ -261,20 +261,21 @@ function sendViewMoreMessage (sender){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
-                    "subtitle": "hello",
+                   
                   
                 }
             );
-            console.log("array----", arr)
+            console.log("array----", arr);
     }
         let messageData =  {
+            "attachment": {
             "type": "template",
             "payload": 
             {
                 "template_type": "generic",
-                "elements": arr
+                "elements": arr,
             }
-        
+        }
         }
         sendRequest(sender, messageData);
     });
