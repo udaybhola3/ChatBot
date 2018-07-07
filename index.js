@@ -211,7 +211,7 @@ function sendListMessage(sender){
               ],
                "buttons": [
                 {
-                  "title": "View More",
+                  "title": "Why",
                   "type": "postback",
                   "payload":"payload"
                  }
@@ -234,7 +234,7 @@ function sendViewMoreMessage (sender){
                 "template_type": "generic",
                 "elements": [
                   {
-                    "title": "welcom",
+                    "title": "welcome",
                     "buttons": [
                       {
                         "type": "web_url",
@@ -250,7 +250,7 @@ function sendViewMoreMessage (sender){
         } 
     ];
 
-    fetch('http://api.susi.ai/susi/chat.json?q=why')
+    fetch('http://api.susi.ai/susi/chat.json?q=show')
     .then(res => res.json())
     .then(json => {
         body=json;
@@ -261,7 +261,7 @@ function sendViewMoreMessage (sender){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
-                    "subtitle": "welcome"
+                    "subtitle": body.answers[0].data[i].link
                   
                 }
             );
