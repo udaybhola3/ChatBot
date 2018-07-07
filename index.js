@@ -59,7 +59,7 @@ function decideMessage(sender, text1){
     }else if(text.includes("list")){
         sendListMessage(sender);
         console.log("List message, inside decide message function");
-    }else if(text.includes("why") || text.includes("Why")){
+    }else if(text.includes("why")){
         sendViewMoreMessage(sender);
         console.log("why, inside decide message function");
     }
@@ -213,7 +213,7 @@ function sendListMessage(sender){
                 {
                   "title": "Why",
                   "type": "postback",
-                  "payload":"payload"
+                  "payload":"why"
                  }
               ]  
             }
