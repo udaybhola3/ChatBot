@@ -265,6 +265,7 @@ function sendViewMoreMessage (sender){
                   
                 }
             );
+            console.log("array----", arr)
     }
         let messageData =  {
             "type": "template",
