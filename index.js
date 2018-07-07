@@ -262,7 +262,8 @@ function sendViewMoreMessage (sender){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
-                    "subtitle": body.answers[0].data[i].skill_link || "welcome"
+                    "subtitle": body.answers[0].data[i].skill_link || "welcome",
+                    "buttons": buttons
                   
                 }
             );
