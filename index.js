@@ -257,10 +257,11 @@ function sendViewMoreMessage (sender){
         var arr = [];
         // console.log(body.answers[0].metadata)
         var metaCnt = body.answers[0].metadata.count;
+        console.log("//////////////////////", metaCnt);
         for(var i=0;i < ((metaCnt>10)?10:metaCnt);i++){
             arr.push(
                 {
-                    "title": body.answers[0].data[i].text,
+                    "title": body.answers[0].data[i].text || "hello user",
                     "subtitle": "welcome"
                   
                 }
