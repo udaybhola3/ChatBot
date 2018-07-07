@@ -59,7 +59,7 @@ function decideMessage(sender, text1){
     }else if(text.includes("list")){
         sendListMessage(sender);
         console.log("List message, inside decide message function");
-    }else if(text.includes("why")){
+    }else if(text.includes("why") || text.includes("Why")){
         sendViewMoreMessage(sender);
         console.log("why, inside decide message function");
     }
@@ -258,7 +258,7 @@ function sendViewMoreMessage (sender){
         // console.log(body.answers[0].metadata)
         var metaCnt = body.answers[0].metadata.count;
         console.log("//////////////////////", metaCnt);
-        for(var i=0;i < ((metaCnt>10)?10:metaCnt);i++){
+        for(var i=0;i < ((metaCnt>4)?4:metaCnt);i++){
             arr.push(
                 {
                     "title": body.answers[0].data[i].text || "hello user",
