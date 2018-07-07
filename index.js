@@ -260,7 +260,7 @@ function sendViewMoreMessage (sender){
         for(var i=0;i < ((metaCnt>10)?10:metaCnt);i++){
             arr.push(
                 {
-                    "title": body.answers[0].data[i].text || "hello user",
+                    "title": body.answers[0].data[i].text,
                     "subtitle": "welcome"
                   
                 }
